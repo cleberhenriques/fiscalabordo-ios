@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "FBRegistro.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self initializeParseWithOptions:launchOptions];
+    
     return YES;
 }
 
@@ -40,6 +44,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)initializeParseWithOptions:(NSDictionary *)launchOptions
+{
+    [FBRegistro registerSubclass];
+    
+    [Parse setApplicationId:@"BH64VIC5VgSfnpAZ0k24q2XghUszuUjnleslRZag"
+                  clientKey:@"pTyDW3oMjr6FcPoZAEAH0rfxMpfD6luPNM2CSSwX"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 }
 
 @end
