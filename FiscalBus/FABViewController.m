@@ -6,20 +6,20 @@
 //  Copyright (c) 2015 Cleber Henriques. All rights reserved.
 //
 
-#import "FBViewController.h"
-#import "FBModalAlertViewController.h"
-#import "FBRegistro.h"
+#import "FABViewController.h"
+#import "FABModalAlertViewController.h"
+#import "FABRegistro.h"
 
-@interface FBViewController ()
+@interface FABViewController ()
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UILabel *labelVelocity;
-@property (strong, nonatomic) FBRegistro *registro;
+@property (strong, nonatomic) FABRegistro *registro;
 @property (strong, nonatomic) CLLocation *lastLocation;
 
 @end
 
-@implementation FBViewController
+@implementation FABViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +34,7 @@
 {
     [super viewDidAppear:animated];
     
-    self.registro = [[FBRegistro alloc] init];
+    self.registro = [[FABRegistro alloc] init];
     
     for (int i = 1; i <= 4; i++) {
         id item = [self.view viewWithTag:i];
@@ -55,7 +55,7 @@
 - (IBAction)buttonReportTouched:(id)sender
 {
     if (self.registro.noBelt || self.registro.badSanitized || self.registro.broke || self.registro.crowded || self.registro.fast) {
-        FBModalAlertViewController *modalController = [self.storyboard instantiateViewControllerWithIdentifier:@"ModalAlertViewController"];
+        FABModalAlertViewController *modalController = [self.storyboard instantiateViewControllerWithIdentifier:@"ModalAlertViewController"];
         
         modalController.lastLocation = self.lastLocation;
         modalController.registro = self.registro;

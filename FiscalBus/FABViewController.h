@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-@interface FBViewController : UIViewController <CLLocationManagerDelegate>
+
+@interface FABViewController : UIViewController <CLLocationManagerDelegate>
 
 
 @end

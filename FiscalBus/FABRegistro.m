@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Cleber Henriques. All rights reserved.
 //
 
-#import "FBRegistro.h"
+#import "FABRegistro.h"
 
-@implementation FBRegistro
+@implementation FABRegistro
 
 @dynamic User;
 @dynamic broke;
@@ -21,13 +21,6 @@
 @dynamic velocity;
 @dynamic noBelt;
 
-+(NSString *)parseClassName
-{
-    return @"Registro";
-}
-
-
-
 - (instancetype)init
 {
     self = [super init];
@@ -38,9 +31,15 @@
         self.badSanitized = NO;
         self.noBelt = NO;
         self.fast = NO;
+        self.plataform = @"iOS";
     }
     
     return self;
+}
+
++(NSString *)parseClassName
+{
+    return @"Registro";
 }
 
 @end

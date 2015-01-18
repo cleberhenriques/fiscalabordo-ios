@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface FBRegistro : PFObject <PFSubclassing>
+@interface FABRegistro : PFObject <PFSubclassing>
 
 @property (strong ,nonatomic) PFUser *User;
 @property (nonatomic, assign) BOOL broke;

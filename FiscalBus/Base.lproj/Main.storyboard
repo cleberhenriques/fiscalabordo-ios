@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FBViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FABViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -198,7 +198,7 @@
         <!--Modal Alert View Controller-->
         <scene sceneID="dhp-HG-wCj">
             <objects>
-                <viewController storyboardIdentifier="ModalAlertViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nmT-KZ-EOf" customClass="FBModalAlertViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModalAlertViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nmT-KZ-EOf" customClass="FABModalAlertViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="STk-iZ-Skm"/>
                         <viewControllerLayoutGuide type="bottom" id="uNT-1y-gKU"/>

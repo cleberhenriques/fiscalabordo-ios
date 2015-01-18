@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-#import "FBRegistro.h"
+#import "FABRegistro.h"
 
 @interface AppDelegate ()
 
@@ -46,7 +46,7 @@
 
 - (void)initializeParseWithOptions:(NSDictionary *)launchOptions
 {
-    [FBRegistro registerSubclass];
+    [FABRegistro registerSubclass];
     
     
     [PFUser enableAutomaticUser];

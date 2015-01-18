@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "FBRegistro.h"
+#import "FABRegistro.h"
 
-@interface FBModalAlertViewController : UIViewController
+@interface FABModalAlertViewController : UIViewController
 
 @property (strong ,nonatomic) CLLocation *lastLocation;
-@property (strong, nonatomic) FBRegistro *registro;
+@property (strong, nonatomic) FABRegistro *registro;
 
 @end

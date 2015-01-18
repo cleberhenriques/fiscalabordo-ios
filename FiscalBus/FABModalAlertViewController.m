@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Cleber Henriques. All rights reserved.
 //
 
-#import "FBModalAlertViewController.h"
+#import "FABModalAlertViewController.h"
 
-@interface FBModalAlertViewController ()
+@interface FABModalAlertViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *companyName;
 @property (weak, nonatomic) IBOutlet UIView *itemsContainer;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation FBModalAlertViewController
+@implementation FABModalAlertViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,7 +58,6 @@
         
         self.registro.company = self.companyName.text;
         self.registro.velocity = [NSString stringWithFormat:@"%.0f km/h", self.lastLocation.speed * 3.6];
-        self.registro.plataform = @"iOS";
         self.registro.User = [PFUser currentUser];
         [self.registro saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
