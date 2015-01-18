@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="XUj-I3-sUB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUg-Rh-Wpe">
+                    <rect key="frame" x="77" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="OsJ-67-efJ"/>
+                        <constraint firstAttribute="width" constant="50" id="eff-MQ-VGL"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-ut-Gfu">
+                    <rect key="frame" x="135" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="pzC-wt-A0U"/>
+                        <constraint firstAttribute="width" constant="50" id="sEN-wD-scF"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kyE-JE-1cl">
+                    <rect key="frame" x="193" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="1Fx-Mj-ZQ2"/>
+                        <constraint firstAttribute="height" constant="50" id="k8a-iP-6ZZ"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PfO-ut-Gfu" firstAttribute="leading" secondItem="tUg-Rh-Wpe" secondAttribute="trailing" constant="8" id="Hno-bh-ldA"/>
+                <constraint firstItem="kyE-JE-1cl" firstAttribute="leading" secondItem="PfO-ut-Gfu" secondAttribute="trailing" constant="8" id="Sn0-0l-uct"/>
+                <constraint firstAttribute="centerY" secondItem="PfO-ut-Gfu" secondAttribute="centerY" id="TTc-zU-sRO"/>
+                <constraint firstAttribute="centerY" secondItem="tUg-Rh-Wpe" secondAttribute="centerY" id="cbh-nk-YtX"/>
+                <constraint firstAttribute="centerY" secondItem="kyE-JE-1cl" secondAttribute="centerY" id="q2d-zc-9fC"/>
+                <constraint firstAttribute="centerX" secondItem="PfO-ut-Gfu" secondAttribute="centerX" id="tzv-OA-yci"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="325" y="456.5"/>
+        </view>
+    </objects>
+</document>

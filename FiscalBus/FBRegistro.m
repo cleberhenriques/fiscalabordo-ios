@@ -14,7 +14,7 @@
 @dynamic broke;
 @dynamic company;
 @dynamic crowded;
-@dynamic dirty;
+@dynamic badSanitized;
 @dynamic fast;
 @dynamic location;
 @dynamic plataform;
@@ -24,6 +24,23 @@
 +(NSString *)parseClassName
 {
     return @"Registro";
+}
+
+
+
+- (instancetype)init
+{
+    self = [super init];
+    
+    if (self) {
+        self.broke = NO;
+        self.crowded = NO;
+        self.badSanitized = NO;
+        self.noBelt = NO;
+        self.fast = NO;
+    }
+    
+    return self;
 }
 
 @end

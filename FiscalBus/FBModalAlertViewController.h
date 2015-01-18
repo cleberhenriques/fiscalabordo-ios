@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "FBRegistro.h"
 
 @interface FBModalAlertViewController : UIViewController
+
+@property (strong ,nonatomic) CLLocation *lastLocation;
+@property (strong, nonatomic) FBRegistro *registro;
 
 @end

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JzP-IB-dQa">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8qH-TY-inM">
+                    <rect key="frame" x="48" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="I2D-r9-idF"/>
+                        <constraint firstAttribute="width" constant="50" id="UPX-Jj-vwi"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLW-KW-lIy">
+                    <rect key="frame" x="106" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="1qg-Jq-pNU"/>
+                        <constraint firstAttribute="height" constant="50" id="yxa-sh-tqw"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ffl-3s-iNE">
+                    <rect key="frame" x="164" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cCv-vy-i3C"/>
+                        <constraint firstAttribute="width" constant="50" id="n7r-JL-9oL"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jIK-CX-m85">
+                    <rect key="frame" x="222" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="0OY-wm-MCZ"/>
+                        <constraint firstAttribute="height" constant="50" id="H6f-so-N8a"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="Ffl-3s-iNE" secondAttribute="centerY" id="6I8-1b-V4d"/>
+                <constraint firstAttribute="centerY" secondItem="8qH-TY-inM" secondAttribute="centerY" id="EfE-nT-890"/>
+                <constraint firstItem="jIK-CX-m85" firstAttribute="leading" secondItem="Ffl-3s-iNE" secondAttribute="trailing" constant="8" id="MCb-8A-3Ul"/>
+                <constraint firstAttribute="centerY" secondItem="KLW-KW-lIy" secondAttribute="centerY" id="Tvl-GO-pUG"/>
+                <constraint firstAttribute="centerY" secondItem="jIK-CX-m85" secondAttribute="centerY" id="ZNm-t4-63b"/>
+                <constraint firstItem="KLW-KW-lIy" firstAttribute="leading" secondItem="8qH-TY-inM" secondAttribute="trailing" constant="8" id="ofw-rZ-Nif"/>
+                <constraint firstAttribute="centerX" secondItem="Ffl-3s-iNE" secondAttribute="centerX" constant="-29" id="rEj-TD-cxY"/>
+                <constraint firstAttribute="centerX" secondItem="KLW-KW-lIy" secondAttribute="centerX" constant="29" id="zK5-il-7PT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="386" y="393"/>
+        </view>
+    </objects>
+</document>

@@ -14,8 +14,8 @@
 @property (strong ,nonatomic) PFUser *User;
 @property (nonatomic, assign) BOOL broke;
 @property (strong, nonatomic) NSString *company;
-@property (strong, nonatomic) NSString *crowded;
-@property (strong, nonatomic) NSString *dirty;
+@property (assign, nonatomic) BOOL crowded;
+@property (assign, nonatomic) BOOL badSanitized;
 @property (strong, nonatomic) NSString *plataform;
 @property (strong, nonatomic) NSString *velocity;
 @property (nonatomic, assign) BOOL noBelt;

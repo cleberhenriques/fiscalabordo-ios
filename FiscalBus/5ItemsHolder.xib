@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-OM-6mZ">
+                    <rect key="frame" x="19" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Bdf-Ec-9yr"/>
+                        <constraint firstAttribute="height" constant="50" id="xoY-wo-lNe"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a4O-JD-aO1">
+                    <rect key="frame" x="77" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Fvd-n7-x1j"/>
+                        <constraint firstAttribute="width" constant="50" id="w4e-0d-Tg9"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="frP-aP-EJd">
+                    <rect key="frame" x="135" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="dAr-RK-9Qh"/>
+                        <constraint firstAttribute="height" constant="50" id="uSH-eW-dYO"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TAX-bs-4ea">
+                    <rect key="frame" x="193" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="NvU-5v-9bC"/>
+                        <constraint firstAttribute="height" constant="50" id="Skd-mq-SVz"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GFJ-b7-FXH">
+                    <rect key="frame" x="251" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="eQR-SN-lfB"/>
+                        <constraint firstAttribute="height" constant="50" id="s1T-Je-UHE"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="frP-aP-EJd" firstAttribute="leading" secondItem="a4O-JD-aO1" secondAttribute="trailing" constant="8" id="B8w-S7-YoN"/>
+                <constraint firstAttribute="centerY" secondItem="frP-aP-EJd" secondAttribute="centerY" id="DpA-v3-zJp"/>
+                <constraint firstItem="TAX-bs-4ea" firstAttribute="leading" secondItem="frP-aP-EJd" secondAttribute="trailing" constant="8" id="HCe-uz-BE1"/>
+                <constraint firstItem="a4O-JD-aO1" firstAttribute="leading" secondItem="wfm-OM-6mZ" secondAttribute="trailing" constant="8" id="Hck-pE-bmq"/>
+                <constraint firstAttribute="centerY" secondItem="TAX-bs-4ea" secondAttribute="centerY" id="IWo-BM-HnU"/>
+                <constraint firstAttribute="centerX" secondItem="frP-aP-EJd" secondAttribute="centerX" id="QZx-d9-L8W"/>
+                <constraint firstAttribute="centerY" secondItem="wfm-OM-6mZ" secondAttribute="centerY" id="W8A-Gw-eFI"/>
+                <constraint firstAttribute="centerY" secondItem="a4O-JD-aO1" secondAttribute="centerY" id="aIK-QA-e5X"/>
+                <constraint firstItem="GFJ-b7-FXH" firstAttribute="leading" secondItem="TAX-bs-4ea" secondAttribute="trailing" constant="8" id="b9o-Xg-S6N"/>
+                <constraint firstAttribute="centerY" secondItem="GFJ-b7-FXH" secondAttribute="centerY" id="mXQ-JZ-eaZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="325" y="456.5"/>
+        </view>
+    </objects>
+</document>

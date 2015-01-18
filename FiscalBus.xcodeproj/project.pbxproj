@@ -16,6 +16,11 @@
 		BA7F75D01A673A35008C19BC /* FiscalBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F75CF1A673A35008C19BC /* FiscalBusTests.m */; };
 		BA7F75DB1A68A440008C19BC /* FBModalAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F75DA1A68A440008C19BC /* FBModalAlertViewController.m */; };
 		BA938AFD1A6AE0C60079D443 /* FBRegistro.m in Sources */ = {isa = PBXBuildFile; fileRef = BA938AFC1A6AE0C60079D443 /* FBRegistro.m */; };
+		BA938B011A6AEB4F0079D443 /* 5ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B001A6AEB4F0079D443 /* 5ItemsHolder.xib */; };
+		BA938B031A6AEC540079D443 /* 4ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B021A6AEC540079D443 /* 4ItemsHolder.xib */; };
+		BA938B051A6AEC8E0079D443 /* 3ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B041A6AEC8E0079D443 /* 3ItemsHolder.xib */; };
+		BA938B071A6AECA50079D443 /* 2ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B061A6AECA50079D443 /* 2ItemsHolder.xib */; };
+		BA938B091A6AECBD0079D443 /* 1ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B081A6AECBD0079D443 /* 1ItemsHolder.xib */; };
 		C10E7CEA8895EEB5F6FE6EDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BBC060EB517E44CD746ADF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,11 @@
 		BA7F75DA1A68A440008C19BC /* FBModalAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBModalAlertViewController.m; sourceTree = "<group>"; };
 		BA938AFB1A6AE0C60079D443 /* FBRegistro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRegistro.h; sourceTree = "<group>"; };
 		BA938AFC1A6AE0C60079D443 /* FBRegistro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRegistro.m; sourceTree = "<group>"; };
+		BA938B001A6AEB4F0079D443 /* 5ItemsHolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 5ItemsHolder.xib; sourceTree = "<group>"; };
+		BA938B021A6AEC540079D443 /* 4ItemsHolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 4ItemsHolder.xib; sourceTree = "<group>"; };
+		BA938B041A6AEC8E0079D443 /* 3ItemsHolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 3ItemsHolder.xib; sourceTree = "<group>"; };
+		BA938B061A6AECA50079D443 /* 2ItemsHolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 2ItemsHolder.xib; sourceTree = "<group>"; };
+		BA938B081A6AECBD0079D443 /* 1ItemsHolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 1ItemsHolder.xib; sourceTree = "<group>"; };
 		C3DD57D8D57ECDDE6565774B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D338E0E4DD72C88CDC154709 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,16 +121,12 @@
 		BA7F75B21A673A35008C19BC /* FiscalBus */ = {
 			isa = PBXGroup;
 			children = (
-				BA938AFA1A6ADFF40079D443 /* Model */,
 				BA7F75B71A673A35008C19BC /* AppDelegate.h */,
 				BA7F75B81A673A35008C19BC /* AppDelegate.m */,
-				BA7F75BA1A673A35008C19BC /* FBViewController.h */,
-				BA7F75BB1A673A35008C19BC /* FBViewController.m */,
-				BA7F75D91A68A440008C19BC /* FBModalAlertViewController.h */,
-				BA7F75DA1A68A440008C19BC /* FBModalAlertViewController.m */,
-				BA7F75BD1A673A35008C19BC /* Main.storyboard */,
 				BA7F75C01A673A35008C19BC /* Images.xcassets */,
-				BA7F75C21A673A35008C19BC /* LaunchScreen.xib */,
+				BA938AFA1A6ADFF40079D443 /* Model */,
+				BA938AFF1A6AEB030079D443 /* View */,
+				BA938AFE1A6AEADD0079D443 /* Controller */,
 				BA7F75B31A673A35008C19BC /* Supporting Files */,
 			);
 			path = FiscalBus;
@@ -159,6 +165,31 @@
 				BA938AFC1A6AE0C60079D443 /* FBRegistro.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		BA938AFE1A6AEADD0079D443 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA7F75BA1A673A35008C19BC /* FBViewController.h */,
+				BA7F75BB1A673A35008C19BC /* FBViewController.m */,
+				BA7F75D91A68A440008C19BC /* FBModalAlertViewController.h */,
+				BA7F75DA1A68A440008C19BC /* FBModalAlertViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BA938AFF1A6AEB030079D443 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA7F75BD1A673A35008C19BC /* Main.storyboard */,
+				BA7F75C21A673A35008C19BC /* LaunchScreen.xib */,
+				BA938B001A6AEB4F0079D443 /* 5ItemsHolder.xib */,
+				BA938B021A6AEC540079D443 /* 4ItemsHolder.xib */,
+				BA938B041A6AEC8E0079D443 /* 3ItemsHolder.xib */,
+				BA938B061A6AECA50079D443 /* 2ItemsHolder.xib */,
+				BA938B081A6AECBD0079D443 /* 1ItemsHolder.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +274,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA938B051A6AEC8E0079D443 /* 3ItemsHolder.xib in Resources */,
+				BA938B031A6AEC540079D443 /* 4ItemsHolder.xib in Resources */,
+				BA938B091A6AECBD0079D443 /* 1ItemsHolder.xib in Resources */,
+				BA938B011A6AEB4F0079D443 /* 5ItemsHolder.xib in Resources */,
 				BA7F75BF1A673A35008C19BC /* Main.storyboard in Resources */,
+				BA938B071A6AECA50079D443 /* 2ItemsHolder.xib in Resources */,
 				BA7F75C41A673A35008C19BC /* LaunchScreen.xib in Resources */,
 				BA7F75C11A673A35008C19BC /* Images.xcassets in Resources */,
 			);
