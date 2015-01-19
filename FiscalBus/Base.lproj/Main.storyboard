@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iUC-Rh-4vx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="d5H-t0-YNF">
+            <objects>
+                <viewController id="cVE-Pq-0bb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ozJ-qN-ybv"/>
+                        <viewControllerLayoutGuide type="bottom" id="FAa-Ul-seq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2IS-HH-nlX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash4" translatesAutoresizingMaskIntoConstraints="NO" id="ZyB-v4-Rsa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcE-nA-nco">
+                                <rect key="frame" x="43" y="460" width="239" height="54"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="prn-vG-eO5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="570-SJ-RDu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6L-bT-a8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="395"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -39,7 +72,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.35398138674691293" green="0.44378120196789489" blue="0.46127288510101006" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.16078431372549021" green="0.61176470588235299" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="dAC-nt-XOi"/>
                                 </constraints>
@@ -60,7 +93,7 @@
                                     <constraint firstAttribute="height" constant="31" id="JYC-Ye-cju"/>
                                     <constraint firstAttribute="width" constant="49" id="NbZ-ga-tkI"/>
                                 </constraints>
-                                <color key="onTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="onTintColor" red="0.32549019607843138" green="0.68627450980392157" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="switchTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="j0N-fI-BYj"/>
                                 </connections>
@@ -81,7 +114,7 @@
                                     <constraint firstAttribute="height" constant="31" id="O9O-EF-srC"/>
                                     <constraint firstAttribute="width" constant="49" id="eAf-Ce-V0I"/>
                                 </constraints>
-                                <color key="onTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="onTintColor" red="0.32549019610000002" green="0.68627450980000004" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="switchTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="obs-0l-tOs"/>
                                 </connections>
@@ -102,7 +135,7 @@
                                     <constraint firstAttribute="width" constant="49" id="Ebh-m1-UjP"/>
                                     <constraint firstAttribute="height" constant="31" id="kpt-VN-Jf9"/>
                                 </constraints>
-                                <color key="onTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="onTintColor" red="0.32549019610000002" green="0.68627450980000004" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="switchTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q4J-Ko-U4c"/>
                                 </connections>
@@ -131,7 +164,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co3-Id-ZP2">
                                 <rect key="frame" x="244" y="124" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.1389812721" green="0.60860073930000003" blue="0.7683278093" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.77254901960784317" green="0.066666666666666666" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="dLM-HI-VRG"/>
                                     <constraint firstAttribute="height" constant="60" id="fgh-Nd-OaB"/>
@@ -155,7 +188,7 @@
                                     <constraint firstAttribute="width" constant="49" id="dd8-Bg-i0e"/>
                                     <constraint firstAttribute="height" constant="31" id="zzr-PE-Z54"/>
                                 </constraints>
-                                <color key="onTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="onTintColor" red="0.32549019610000002" green="0.68627450980000004" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="switchTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="sMZ-nD-cMk"/>
                                 </connections>
@@ -186,6 +219,7 @@
                             <constraint firstAttribute="trailing" secondItem="B1u-9b-9UC" secondAttribute="trailing" constant="16" id="zYh-Nf-wP5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8lg-GT-IcG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="labelVelocity" destination="VlI-VU-dHN" id="Pki-C2-5Vo"/>
@@ -193,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="395"/>
+            <point key="canvasLocation" x="694" y="395"/>
         </scene>
         <!--Modal Alert View Controller-->
         <scene sceneID="dhp-HG-wCj">
@@ -231,6 +265,7 @@
                                     <constraint firstAttribute="width" constant="49" id="AkL-2w-aCN"/>
                                     <constraint firstAttribute="height" constant="31" id="Zzu-ni-ZdD"/>
                                 </constraints>
+                                <color key="onTintColor" red="0.32549019610000002" green="0.68627450980000004" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="identifyTouched:" destination="nmT-KZ-EOf" eventType="valueChanged" id="W3w-Dp-pip"/>
                                 </connections>
@@ -252,6 +287,7 @@
                                     <constraint firstAttribute="width" constant="83" id="yQE-6c-1lK"/>
                                 </constraints>
                                 <state key="normal" title="CANCELAR">
+                                    <color key="titleColor" red="0.7725490196" green="0.066666666669999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -265,6 +301,7 @@
                                     <constraint firstAttribute="height" constant="30" id="fw4-XO-am0"/>
                                 </constraints>
                                 <state key="normal" title="ALERTAR">
+                                    <color key="titleColor" red="0.7725490196" green="0.066666666669999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -286,13 +323,13 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1t-K5-DTD">
                                         <rect key="frame" x="0.0" y="94" width="320" height="50"/>
-                                        <color key="backgroundColor" red="0.070547846920000004" green="0.52898399929999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.066666666669999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="OEY-rG-Hkt"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.070547846920000004" green="0.52898399929999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.7725490196" green="0.066666666669999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="d1t-K5-DTD" secondAttribute="bottom" constant="12" id="0lv-1p-KiR"/>
                                     <constraint firstAttribute="centerX" secondItem="pzX-OT-d8P" secondAttribute="centerX" id="1Cw-2Z-1IW"/>
@@ -326,13 +363,33 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="companyName" destination="w6g-le-PwY" id="osa-VD-Aek"/>
+                        <outlet property="identifySwitch" destination="9hn-fu-qKL" id="nQG-Cf-sob"/>
                         <outlet property="itemsContainer" destination="d1t-K5-DTD" id="kF9-js-vGc"/>
                         <outlet property="labelVelocity" destination="pzX-OT-d8P" id="FyM-EW-C5X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwV-zD-LGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="395"/>
+            <point key="canvasLocation" x="1030" y="395"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ViO-yH-5dr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="iUC-Rh-4vx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mUf-da-wbV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cVE-Pq-0bb" kind="relationship" relationship="rootViewController" id="VIY-42-cQB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnL-Lj-MhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="395"/>
         </scene>
     </scenes>
     <resources>
@@ -341,6 +398,7 @@
         <image name="BUG" width="48" height="48"/>
         <image name="MEGAFONE" width="48" height="48"/>
         <image name="STAND" width="48" height="48"/>
+        <image name="Splash4" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -7,12 +7,13 @@
 //
 
 #import "FABModalAlertViewController.h"
-
+#import "PFFacebookUtils.h"
 @interface FABModalAlertViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *companyName;
 @property (weak, nonatomic) IBOutlet UIView *itemsContainer;
 @property (weak, nonatomic) IBOutlet UILabel *labelVelocity;
+@property (weak, nonatomic) IBOutlet UISwitch *identifySwitch;
 
 @end
 
@@ -27,17 +28,27 @@
                                             action:@selector(handleSingleTap:)];
     [self.view addGestureRecognizer:singleFingerTap];
     self.labelVelocity.text = [NSString stringWithFormat:@"%.0f km/h", self.lastLocation.speed * 3.6];
+    
+    
+    if ([PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self.identifySwitch setOn:YES animated:NO];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)identifyTouched:(id)sender
+- (IBAction)identifyTouched:(UISwitch *)sender
 {
-   
+    if (sender.isOn) {
+        [self linkFacebookUser];
+    }else{
+        [self unlinkFacebookUser];
+    }
+    
 }
-
 - (IBAction)buttonCancelarTouched:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -156,4 +167,49 @@
     return selectedItems;
 }
 
+- (void)setFacebookInfo
+{
+    FBRequest *request = [FBRequest requestForMe];
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            PFUser *currentUser = [PFUser currentUser];
+            NSDictionary *dictData = (NSDictionary *) result;
+        
+            currentUser[@"name"] = dictData[@"name"];
+            currentUser[@"link"] = dictData[@"link"];
+            currentUser[@"email"] = dictData[@"email"];
+            
+            [currentUser saveEventually];
+        }
+    }];
+}
+
+- (void)linkFacebookUser
+{
+    NSArray *permissions = @[@"user_about_me"];
+    
+    if (![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [PFFacebookUtils linkUser:[PFUser currentUser] permissions:permissions block:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                [self setFacebookInfo];
+            }
+        }];
+    }
+}
+
+- (void)unlinkFacebookUser
+{
+   [PFFacebookUtils unlinkUserInBackground:[PFUser currentUser] block:^(BOOL succeeded, NSError *error) {
+       if (succeeded) {
+           NSLog(@"Unlink succeeded");
+           PFUser *currentUser = [PFUser currentUser];
+           currentUser[@"name"] = @"";
+           currentUser[@"link"] = @"";
+           [currentUser saveEventually];
+       }else{
+           NSLog(@"%@",error);
+       }
+   }];
+    
+}
 @end

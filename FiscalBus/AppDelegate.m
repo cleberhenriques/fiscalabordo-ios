@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "FABRegistro.h"
+#import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
+#import "PFFacebookUtils.h"
 
 @interface AppDelegate ()
 
@@ -36,12 +38,21 @@
  
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication
+                        withSession:[PFFacebookUtils session]];
+}
 
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-
+    [[PFFacebookUtils session] close];
 }
 
 - (void)initializeParseWithOptions:(NSDictionary *)launchOptions
@@ -57,7 +68,7 @@
     [Parse setApplicationId:@"BH64VIC5VgSfnpAZ0k24q2XghUszuUjnleslRZag"
                   clientKey:@"pTyDW3oMjr6FcPoZAEAH0rfxMpfD6luPNM2CSSwX"];
     
-    
+    [PFFacebookUtils initializeFacebook];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 }

@@ -12,7 +12,6 @@
 		BA7F75BC1A673A35008C19BC /* FABViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F75BB1A673A35008C19BC /* FABViewController.m */; };
 		BA7F75BF1A673A35008C19BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7F75BD1A673A35008C19BC /* Main.storyboard */; };
 		BA7F75C11A673A35008C19BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7F75C01A673A35008C19BC /* Images.xcassets */; };
-		BA7F75C41A673A35008C19BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7F75C21A673A35008C19BC /* LaunchScreen.xib */; };
 		BA7F75D01A673A35008C19BC /* FiscalBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F75CF1A673A35008C19BC /* FiscalBusTests.m */; };
 		BA7F75DB1A68A440008C19BC /* FABModalAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7F75DA1A68A440008C19BC /* FABModalAlertViewController.m */; };
 		BA938AFD1A6AE0C60079D443 /* FABRegistro.m in Sources */ = {isa = PBXBuildFile; fileRef = BA938AFC1A6AE0C60079D443 /* FABRegistro.m */; };
@@ -21,6 +20,7 @@
 		BA938B051A6AEC8E0079D443 /* 3ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B041A6AEC8E0079D443 /* 3ItemsHolder.xib */; };
 		BA938B071A6AECA50079D443 /* 2ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B061A6AECA50079D443 /* 2ItemsHolder.xib */; };
 		BA938B091A6AECBD0079D443 /* 1ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B081A6AECBD0079D443 /* 1ItemsHolder.xib */; };
+		BA938B0B1A6C5F950079D443 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA938B0A1A6C5F950079D443 /* Default-568h@2x.png */; };
 		C10E7CEA8895EEB5F6FE6EDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BBC060EB517E44CD746ADF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 		BA7F75BB1A673A35008C19BC /* FABViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FABViewController.m; sourceTree = "<group>"; };
 		BA7F75BE1A673A35008C19BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA7F75C01A673A35008C19BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BA7F75C31A673A35008C19BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BA7F75C91A673A35008C19BC /* FiscalBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiscalBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7F75CE1A673A35008C19BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA7F75CF1A673A35008C19BC /* FiscalBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiscalBusTests.m; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		BA938B041A6AEC8E0079D443 /* 3ItemsHolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 3ItemsHolder.xib; sourceTree = "<group>"; };
 		BA938B061A6AECA50079D443 /* 2ItemsHolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 2ItemsHolder.xib; sourceTree = "<group>"; };
 		BA938B081A6AECBD0079D443 /* 1ItemsHolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 1ItemsHolder.xib; sourceTree = "<group>"; };
+		BA938B0A1A6C5F950079D443 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C3DD57D8D57ECDDE6565774B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D338E0E4DD72C88CDC154709 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +101,7 @@
 		BA7F75A71A673A35008C19BC = {
 			isa = PBXGroup;
 			children = (
+				BA938B0A1A6C5F950079D443 /* Default-568h@2x.png */,
 				BA7F75B21A673A35008C19BC /* FiscalBus */,
 				BA7F75CC1A673A35008C19BC /* FiscalBusTests */,
 				BA7F75B11A673A35008C19BC /* Products */,
@@ -182,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				BA7F75BD1A673A35008C19BC /* Main.storyboard */,
-				BA7F75C21A673A35008C19BC /* LaunchScreen.xib */,
 				BA938B001A6AEB4F0079D443 /* 5ItemsHolder.xib */,
 				BA938B021A6AEC540079D443 /* 4ItemsHolder.xib */,
 				BA938B041A6AEC8E0079D443 /* 3ItemsHolder.xib */,
@@ -279,8 +279,8 @@
 				BA938B091A6AECBD0079D443 /* 1ItemsHolder.xib in Resources */,
 				BA938B011A6AEB4F0079D443 /* 5ItemsHolder.xib in Resources */,
 				BA7F75BF1A673A35008C19BC /* Main.storyboard in Resources */,
+				BA938B0B1A6C5F950079D443 /* Default-568h@2x.png in Resources */,
 				BA938B071A6AECA50079D443 /* 2ItemsHolder.xib in Resources */,
-				BA7F75C41A673A35008C19BC /* LaunchScreen.xib in Resources */,
 				BA7F75C11A673A35008C19BC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,14 +365,6 @@
 				BA7F75BE1A673A35008C19BC /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BA7F75C21A673A35008C19BC /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA7F75C31A673A35008C19BC /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -462,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FiscalBus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -473,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FiscalBus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
