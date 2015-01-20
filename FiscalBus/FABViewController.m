@@ -14,8 +14,10 @@
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UILabel *labelVelocity;
+@property (weak, nonatomic) IBOutlet UILabel *labelInfo;
 @property (strong, nonatomic) FABRegistro *registro;
 @property (strong, nonatomic) CLLocation *lastLocation;
+@property (weak, nonatomic) IBOutlet UIButton *btnAuthorizationDenied;
 
 @end
 
@@ -42,6 +44,18 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        self.btnAuthorizationDenied.hidden = YES;
+        self.labelVelocity.hidden = NO;
+        self.labelInfo.hidden = NO;
+    }else{
+        self.btnAuthorizationDenied.hidden = NO;
+        self.labelVelocity.hidden = YES;
+        self.labelInfo.hidden = YES;
+    }
+}
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *location = [locations lastObject];
@@ -52,6 +66,18 @@
     self.lastLocation = location;
 }
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        self.btnAuthorizationDenied.hidden = YES;
+        self.labelVelocity.hidden = NO;
+        self.labelInfo.hidden = NO;
+    }else{
+        self.btnAuthorizationDenied.hidden = NO;
+        self.labelVelocity.hidden = YES;
+        self.labelInfo.hidden = YES;
+    }
+}
 - (IBAction)buttonReportTouched:(id)sender
 {
     if (self.registro.noBelt || self.registro.badSanitized || self.registro.broke || self.registro.crowded || self.registro.fast) {
@@ -69,6 +95,10 @@
                                               otherButtonTitles:nil, nil];
         [alert show];
     }
+}
+- (IBAction)btnAuthorizationDenied:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
 
 - (IBAction)switchTouched:(UISwitch *)sender
