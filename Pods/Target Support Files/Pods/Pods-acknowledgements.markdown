@@ -232,6 +232,11 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    limitations under the License.
 
 
+## GoogleAnalytics-iOS-SDK
+
+Copyright 2009 - 2014 Google, Inc. All rights reserved.
+
+
 ## Parse
 
 See https://www.parse.com/about/terms

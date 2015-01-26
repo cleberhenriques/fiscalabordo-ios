@@ -11,7 +11,7 @@
 #import "FABRegistro.h"
 #import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
 #import "PFFacebookUtils.h"
-
+#import "MXGoogleAnalytics.h"
 @interface AppDelegate ()
 
 @end
@@ -22,6 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self initializeParseWithOptions:launchOptions];
+    
+    [MXGoogleAnalytics ga_inicializeWithTrackingId:@"GOOGLE-ANALYTICS-UA"];
+    
+    [MXGoogleAnalytics ga_trackApplicationLauchingWithOptions:launchOptions];
     
     return YES;
 }
@@ -59,14 +63,13 @@
 {
     [FABRegistro registerSubclass];
     
-    
     [PFUser enableAutomaticUser];
     PFACL *defaultACL = [[PFACL alloc] init];
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
-    [Parse setApplicationId:@"BH64VIC5VgSfnpAZ0k24q2XghUszuUjnleslRZag"
-                  clientKey:@"pTyDW3oMjr6FcPoZAEAH0rfxMpfD6luPNM2CSSwX"];
+    [Parse setApplicationId:@"PARSE-APP-ID"
+                  clientKey:@"PARSE-CLIENT-KEY"];
     
     [PFFacebookUtils initializeFacebook];
     

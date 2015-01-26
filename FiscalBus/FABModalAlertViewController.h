@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "FABRegistro.h"
 
-@interface FABModalAlertViewController : UIViewController
+@interface FABModalAlertViewController : UIViewController <UIAlertViewDelegate>
 
 @property (strong ,nonatomic) CLLocation *lastLocation;
 @property (strong, nonatomic) FABRegistro *registro;

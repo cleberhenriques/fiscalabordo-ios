@@ -9,7 +9,8 @@
 #import "FABViewController.h"
 #import "FABModalAlertViewController.h"
 #import "FABRegistro.h"
-
+#import "AppDelegate.h"
+#import "MXGoogleAnalytics.h"
 @interface FABViewController ()
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -28,7 +29,10 @@
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
-    [self.locationManager requestWhenInUseAuthorization];
+    
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
     [self.locationManager startUpdatingLocation];
 }
 
@@ -42,19 +46,13 @@
         id item = [self.view viewWithTag:i];
         [item setOn:NO animated:YES];
     }
+    
+    [MXGoogleAnalytics ga_trackScreen:@"Main"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        self.btnAuthorizationDenied.hidden = YES;
-        self.labelVelocity.hidden = NO;
-        self.labelInfo.hidden = NO;
-    }else{
-        self.btnAuthorizationDenied.hidden = NO;
-        self.labelVelocity.hidden = YES;
-        self.labelInfo.hidden = YES;
-    }
+    [self handleGPSAuthorization];
 }
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
@@ -68,15 +66,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        self.btnAuthorizationDenied.hidden = YES;
-        self.labelVelocity.hidden = NO;
-        self.labelInfo.hidden = NO;
-    }else{
-        self.btnAuthorizationDenied.hidden = NO;
-        self.labelVelocity.hidden = YES;
-        self.labelInfo.hidden = YES;
-    }
+    [self handleGPSAuthorization];
 }
 - (IBAction)buttonReportTouched:(id)sender
 {
@@ -98,7 +88,13 @@
 }
 - (IBAction)btnAuthorizationDenied:(id)sender {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Habilitar GPS" message:@"Vá em Ajustes -> Privacidade -> Localização -> Fiscal a Bordo e habilite o uso do GPS para conseguir monitorar a velocidade em que se encontra." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }else{
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+    }
+    
 }
 
 - (IBAction)switchTouched:(UISwitch *)sender
@@ -116,8 +112,24 @@
         case 4:
             self.registro.broke = sender.isOn;
             break;
+        case 5:
+            self.registro.fast = sender.isOn;
+            break;
         default:
             break;
+    }
+}
+
+- (void)handleGPSAuthorization
+{
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        self.btnAuthorizationDenied.hidden = YES;
+        self.labelVelocity.hidden = NO;
+        self.labelInfo.hidden = NO;
+    }else{
+        self.btnAuthorizationDenied.hidden = NO;
+        self.labelVelocity.hidden = YES;
+        self.labelInfo.hidden = YES;
     }
 }
 

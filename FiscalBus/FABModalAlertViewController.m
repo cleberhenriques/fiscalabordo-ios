@@ -73,7 +73,11 @@
         self.registro.velocity = [NSString stringWithFormat:@"%.0f km/h", self.lastLocation.speed * 3.6];
         self.registro.User = [PFUser currentUser];
         [self.registro saveInBackground];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        
+        UIAlertView *alertSuccess = [[UIAlertView alloc] initWithTitle:@"Registro feito!" message:@"Obrigado por fazer a denúncia. Desejamos a você uma excelente viagem." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        [alertSuccess show];
         
     }
 }
@@ -161,6 +165,16 @@
         [selectedItems addObject:@"BROKE"];
     }
     
+    if (self.registro.fast) {
+        [selectedItems addObject:@"VELOCITY"];
+    }
     return selectedItems;
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([alertView.title hasPrefix:@"Registro"]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 @end

@@ -22,6 +22,7 @@
 		BA938B091A6AECBD0079D443 /* 1ItemsHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA938B081A6AECBD0079D443 /* 1ItemsHolder.xib */; };
 		BA938B0B1A6C5F950079D443 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA938B0A1A6C5F950079D443 /* Default-568h@2x.png */; };
 		BA938B0F1A6DD0DF0079D443 /* FABUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA938B0E1A6DD0DF0079D443 /* FABUserManager.m */; };
+		BA938B131A6F4C530079D443 /* MXGoogleAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = BA938B111A6F4C530079D443 /* MXGoogleAnalytics.m */; };
 		C10E7CEA8895EEB5F6FE6EDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BBC060EB517E44CD746ADF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		BA938B0A1A6C5F950079D443 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BA938B0D1A6DD0DF0079D443 /* FABUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FABUserManager.h; sourceTree = "<group>"; };
 		BA938B0E1A6DD0DF0079D443 /* FABUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FABUserManager.m; sourceTree = "<group>"; };
+		BA938B111A6F4C530079D443 /* MXGoogleAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXGoogleAnalytics.m; sourceTree = "<group>"; };
+		BA938B121A6F4C530079D443 /* MXGoogleAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXGoogleAnalytics.h; sourceTree = "<group>"; };
 		C3DD57D8D57ECDDE6565774B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D338E0E4DD72C88CDC154709 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +128,7 @@
 		BA7F75B21A673A35008C19BC /* FiscalBus */ = {
 			isa = PBXGroup;
 			children = (
+				BA938B101A6F4C220079D443 /* External */,
 				BA938B0C1A6DD0AA0079D443 /* Managers */,
 				BA7F75B71A673A35008C19BC /* AppDelegate.h */,
 				BA7F75B81A673A35008C19BC /* AppDelegate.m */,
@@ -203,6 +207,15 @@
 				BA938B0E1A6DD0DF0079D443 /* FABUserManager.m */,
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		BA938B101A6F4C220079D443 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				BA938B111A6F4C530079D443 /* MXGoogleAnalytics.m */,
+				BA938B121A6F4C530079D443 /* MXGoogleAnalytics.h */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA938B131A6F4C530079D443 /* MXGoogleAnalytics.m in Sources */,
 				BA938B0F1A6DD0DF0079D443 /* FABUserManager.m in Sources */,
 				BA938AFD1A6AE0C60079D443 /* FABRegistro.m in Sources */,
 				BA7F75BC1A673A35008C19BC /* FABViewController.m in Sources */,
@@ -471,6 +485,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -483,6 +498,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
